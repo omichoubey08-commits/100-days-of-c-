@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, first, last, divisor, middle, result;
+
+    scanf("%d", &n);
+
+    last = n % 10;
+
+    divisor = 1;
+    while (n / divisor >= 10)
+    {
+        divisor = divisor * 10;
+    }
+
+    first = n / divisor;
+
+    middle = n % divisor;
+    middle = middle / 10;
+
+    result = last * divisor + middle * 10 + first;
+
+    printf("%d", result);
+
+    return 0;
+}
